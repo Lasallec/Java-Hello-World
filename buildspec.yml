@@ -27,6 +27,6 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name”:"dev-java-hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name”:"dev-java-hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > dev-java-hello-world-imagedefinitions.json
 artifacts:
-    files: imagedefinitions.json
+    files: dev-java-hello-world-imagedefinitions.json

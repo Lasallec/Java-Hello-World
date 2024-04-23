@@ -14,7 +14,10 @@ public class IndexController {
     @GetMapping("/")
     public HashMap index() {
         logger.debug("request served");
-
+     public ResponseEntity<String> healthCheck() {
+    return ResponseEntity.ok().build();
+  }
+}
         return new HashMap<>() {{
             put("success", true);
             put("hello", "world");
